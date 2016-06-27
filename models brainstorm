@@ -1,0 +1,22 @@
+User {
+  username = string
+  password = string
+
+  has_many posts
+  has_many comments
+}
+
+Post {
+  title = string
+  url = string
+
+  belongs_to user
+  has_many comments
+}
+
+Comment {
+  text = string
+
+  belongs_to = user
+  belongs_to = post
+}
